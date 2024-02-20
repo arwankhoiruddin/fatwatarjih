@@ -10,8 +10,8 @@ from langchain.document_loaders import TextLoader
 
 import os
 
-os.environ['HUGGINGFACEHUB_API_TOKEN'] = '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'
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = ''
+os.environ['OPENAI_API_KEY'] = ''
 
 # model_name = 'openai/gpt-3.5-turbo'
 model_name = "BAAI/bge-small-en-v1.5"
