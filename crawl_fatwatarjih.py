@@ -32,11 +32,13 @@ for url in urls:
             pertanyaan += paragraph.text
         elif not collect_paragraphs:
             jawaban += paragraph.text
-        if pertanyaan and jawaban:
-            fatwa.append(f'Pertanyaan: {pertanyaan} \n Jawaban: {jawaban}')
+    if pertanyaan and jawaban:
+        respond = f'Pertanyaan: {pertanyaan} \n Jawaban: {jawaban}'
+        if respond not in fatwa:
+            fatwa.append(respond)
 
 # Specify the file path
-file_path = "fatwa.txt"
+file_path = "fatwa_nodup.txt"
 
 # Open the file in write mode
 with open(file_path, "w") as file:
